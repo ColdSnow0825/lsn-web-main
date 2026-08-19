@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目 Projects ｜ 刘思诺 Snow</title>
+<meta name="description" content="刘思诺（Snow）的项目集：VCT 电竞语义网、《Not Enough Time》游戏汉化、《无畏契约》中国市场本地化研究、穿书机器 VR、jieba 文本挖掘与词云可视化、外研测评新媒体账号 0→1。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/esports.css">
+<link rel="stylesheet" href="./css/site.css">
+</head>
+
+<body>
+
+<div class="fx-scanlines"></div>
+<div class="fx-noise"></div>
+<div class="fx-vignette"></div>
+<div class="fx-hud"><span></span><span></span><span></span><span></span></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<header class="nav-e" data-nav>
+  <div class="nav-e__inner">
+    <a class="nav-e__brand" href="./index.html"><i></i>SNOW<span class="u-red">/</span>LIU</a>
+    <nav>
+      <ul class="nav-e__links">
+        <li><a class="nav-e__link" href="./index.html">Home</a></li>
+        <li><a class="nav-e__link" href="./about.html">Dossier</a></li>
+        <li><a class="nav-e__link" href="./valorant.html">Valorant</a></li>
+        <li><a class="nav-e__link is-active" href="./projects.html">Projects</a></li>
+        <li><a class="nav-e__link" href="./cv.html">Resume</a></li>
+      </ul>
+    </nav>
+    <div class="d-flex align-items-center gap-3">
+      <a class="btn-e btn-e--solid btn-e--sm d-none d-lg-inline-flex" href="./cv.html">简历 <span class="btn-e__arrow">→</span></a>
+      <button class="nav-e__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#navPanel" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-end oc-e" tabindex="-1" id="navPanel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">NAVIGATION</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="关闭"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="oc-e__link" href="./index.html"><small>01</small> Home</a>
+    <a class="oc-e__link" href="./about.html"><small>02</small> Dossier</a>
+    <a class="oc-e__link" href="./valorant.html"><small>03</small> Valorant</a>
+    <a class="oc-e__link" href="./projects.html"><small>04</small> Projects</a>
+    <a class="oc-e__link" href="./cv.html"><small>05</small> Resume</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ 页头 ============ -->
+<section class="page-hero">
+  <div class="u-shell position-relative" style="z-index:2">
+    <span class="u-kicker">Mission Log</span>
+    <h1 class="page-hero__title u-display">项目 <span class="u-red">档案</span></h1>
+    <p class="page-hero__lead">
+      从游戏本地化、赛事数据结构化，到新媒体从 0 到 1——
+      下面这些项目共同说明一件事：我习惯把一个模糊的需求拆成可执行的步骤，然后自己做完它。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 项目网格 ============ -->
+<section class="section" id="grid">
+  <div class="u-shell">
+
+    <div class="section__head">
+      <div data-reveal>
+        <span class="u-kicker">All Projects</span>
+        <h2 class="section__title">全部 <em>项目</em></h2>
+      </div>
+      <p class="u-mono" data-reveal style="max-width:30ch;--d:.1s">
+        // 06 ENTRIES · 2021 — 2026
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- 01 VCT 语义网 -->
+      <div class="col-md-6 col-xl-4" id="ontology" data-reveal style="--d:0s">
+        <article class="card-e">
+          <div class="card-e__media is-diagram" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#ontologyModal" aria-label="放大查看语义网架构图">
+            <img src="./images/Valorantesportsontology.png" alt="Valorant Esports Ontology 语义网架构图">
+            <span class="card-e__idx">01</span>
+          </div>
+          <div class="card-e__body">
+            <h3 class="card-e__title">VCT 电竞语义网</h3>
+            <p class="card-e__desc">
+              UCL 数字人文课程项目。独立设计《无畏契约》选手与俱乐部本体（Ontology），
+              在图数据库中录入选手信息，将联盟架构、战队归属与选手转会关系结构化为可查询数据。
+            </p>
+            <div class="card-e__foot"><span class="u-mono">UCL · 2026</span><span class="u-tag">Ontology</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 02 Not Enough Time -->
+      <div class="col-md-6 col-xl-4" id="net" data-reveal style="--d:.08s">
+        <article class="card-e">
+          <div class="card-e__media">
+            <img src="./images/project3.png" alt="Not Enough Time">
+            <span class="card-e__idx">02</span>
+          </div>
+          <div class="card-e__body">
+            <h3 class="card-e__title">
+              <a href="https://uob-tri.itch.io/not-enough-time-do-enjoy-life" target="_blank" rel="noopener">《Not Enough Time》汉化</a>
+            </h3>
+            <p class="card-e__desc">
+              独立游戏中文本地化项目负责人，个人翻译逾 5,000 词，
+              统筹术语表、进度排期与质量校对，成品已在 itch.io 上线。
+            </p>
+            <div class="card-e__foot"><span class="u-mono">2024</span><span class="u-tag u-tag--red">本地化</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 03 本地化研究 -->
+      <div class="col-md-6 col-xl-4" id="localisation" data-reveal style="--d:.16s">
+        <article class="card-e">
+          <div class="card-e__media">
+            <img src="./images/project1.jpg" alt="游戏本地化研究">
+            <span class="card-e__idx">03</span>
+          </div>
+          <div class="card-e__body">
+            <h3 class="card-e__title">
+              <a href="./files/Liu-Sinuo-CAT-Game-Localisation-Essay.pdf" target="_blank" rel="noopener">《无畏契约》本地化研究</a>
+            </h3>
+            <p class="card-e__desc">
+              硕士论文研究《无畏契约》在中国市场的语言、文化与技术本地化；
+              课程论文对比 SDL Trados 与 MemoQ 在游戏更新公告本地化中的适用性。
+            </p>
+            <div class="card-e__foot"><span class="u-mono">Bristol · 2024</span><span class="u-tag u-tag--gold">研究</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 04 词云 -->
+      <div class="col-md-6 col-xl-4" id="wordcloud" data-reveal style="--d:0s">
+        <article class="card-e">
+          <div class="card-e__media">
+            <img src="./images/project4.png" alt="文本挖掘与词云">
+            <span class="card-e__idx">04</span>
+          </div>
+          <div class="card-e__body">
+            <h3 class="card-e__title">
+              <a href="./files/snowbook/_build/html/wordcloud.html" target="_blank" rel="noopener">文本挖掘与词云可视化</a>
+            </h3>
+            <p class="card-e__desc">
+              基于 jieba 的中文文本主题挖掘与词云可视化，
+              以 Jupyter Book 形式发布完整分析流程与可复现代码。
+            </p>
+            <div class="card-e__foot"><span class="u-mono">Python · Jieba</span><span class="u-tag">数据</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 05 穿书机器 -->
+      <div class="col-md-6 col-xl-4" id="vr" data-reveal style="--d:.08s">
+        <article class="card-e">
+          <div class="card-e__media">
+            <img src="./images/project2.png" alt="穿书机器">
+            <span class="card-e__idx">05</span>
+          </div>
+          <div class="card-e__body">
+            <h3 class="card-e__title">
+              <a href="./files/Book-Immersion-Machine.pdf" target="_blank" rel="noopener">穿书机器 Book Immersion Machine</a>
+            </h3>
+            <p class="card-e__desc">
+              融合数字技术与人文阅读的 VR 概念装置设计，
+              曾获中国大学生计算机设计大赛二等奖。
+            </p>
+            <div class="card-e__foot"><span class="u-mono">2022</span><span class="u-tag u-tag--gold">竞赛获奖</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 06 新媒体 -->
+      <div class="col-md-6 col-xl-4" id="media" data-reveal style="--d:.16s">
+        <article class="card-e">
+          <div class="card-e__media">
+            <div class="u-ph">NEW MEDIA 0 → 1</div>
+            <span class="card-e__idx">06</span>
+          </div>
+          <div class="card-e__body">
+            <h3 class="card-e__title">「外研测评」账号 0→1</h3>
+            <p class="card-e__desc">
+              负责账号从 0 到 1 的内容策划、发布排期与数据复盘，
+              增长至 1,300 粉丝，单篇最高曝光 1.2 万；
+              兼任 AI 小组组长，获公司 AIGC 大赛一等奖。
+            </p>
+            <div class="card-e__foot"><span class="u-mono">FLTRP · 2024</span><span class="u-tag u-tag--red">运营</span></div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-e u-notch-card mt-5" data-reveal>
+      <span class="u-kicker justify-content-center">More</span>
+      <h2 class="u-display" style="font-size:clamp(2.2rem,6vw,5rem);margin:.6rem 0 1rem">
+        MORE <span class="u-red">INCOMING</span>
+      </h2>
+      <p class="u-dim mx-auto" style="max-width:52ch">
+        正在把 VCT 语义网继续扩展为可交互的联盟关系可视化。有想法或合作意向欢迎直接联系。
+      </p>
+      <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+        <a class="btn-e btn-e--solid btn-e--lg" href="https://github.com/SnowL365/lsn-web" target="_blank" rel="noopener">GITHUB <span class="btn-e__arrow">→</span></a>
+        <a class="btn-e btn-e--lg" href="mailto:snowliu0529@163.com">邮件联系</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer-e">
+  <div class="u-shell">
+    <div class="footer-e__grid">
+      <div>
+        <a class="nav-e__brand mb-3 d-inline-flex" href="./index.html"><i></i>SNOW<span class="u-red">/</span>LIU</a>
+        <p class="u-dim" style="font-size:.9rem;max-width:32ch">
+          刘思诺（Snow）· 无畏契约电竞联盟运营方向<br>Base 上海 / 北京 / 伦敦，可接受高频出差。
+        </p>
+      </div>
+      <div>
+        <div class="footer-e__head">Navigate</div>
+        <ul>
+          <li><a href="./index.html">首页 Home</a></li>
+          <li><a href="./about.html">个人档案 Dossier</a></li>
+          <li><a href="./valorant.html">无畏契约 Valorant</a></li>
+          <li><a href="./cv.html">简历 Resume</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-e__head">Channels</div>
+        <ul>
+          <li><a href="https://github.com/SnowL365/lsn-web" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:snowliu0529@163.com">snowliu0529@163.com</a></li>
+          <li><a href="tel:+8618519385835">185 1938 5835</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-e__head">Status</div>
+        <ul class="kv">
+          <li><span class="k">Now</span><span class="v">英雄电竞 CCI</span></li>
+          <li><span class="k">Study</span><span class="v">UCL 数字人文</span></li>
+          <li><span class="k">Seeking</span><span class="v">联盟运营</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-e__bar">
+      <span class="u-mono">© 2026 LIU SINUO</span>
+      <span class="u-mono">DESIGN SYSTEM: PROTOCOL</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" data-to-top aria-label="回到顶部">↑</button>
+
+<!-- ============ 架构图放大 ============ -->
+<div class="modal fade modal-e modal-diagram" id="ontologyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">VALORANT ESPORTS ONTOLOGY</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./images/Valorantesportsontology.png" alt="Valorant Esports Ontology 语义网架构图（大图）">
+      </div>
+      <div class="modal-footer">
+        <span class="u-mono me-auto">// UCL DIGITAL HUMANITIES · 2026</span>
+        <a class="btn-e btn-e--ghost btn-e--sm" href="./images/Valorantesportsontology.png" target="_blank" rel="noopener">原图</a>
+        <button class="btn-e btn-e--solid btn-e--sm" data-bs-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/esports.js"></script>
+</body>
+</html>

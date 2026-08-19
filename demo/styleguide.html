@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STYLE GUIDE // PROTOCOL — 设计规范</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/esports.css">
+
+<style>
+  /* 仅规范页使用的展示样式 */
+  .sg-swatch { height: 96px; border: 1px solid var(--e-line); display: grid; align-content: end; padding: .6rem; }
+  .sg-swatch code { font-family: var(--f-mono); font-size: .7rem; color: rgba(255,255,255,.75); }
+  .sg-block { border: 1px solid var(--e-line); padding: 1.5rem; background: rgba(11,18,26,.55); height: 100%; }
+  .sg-label { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .2em; color: var(--e-fg-mute); text-transform: uppercase; margin-bottom: .9rem; display: block; }
+  .sg-block .card-skill { height: auto; }
+</style>
+</head>
+
+<body>
+
+<div class="fx-scanlines"></div>
+<div class="fx-noise"></div>
+<div class="fx-vignette"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<header class="nav-e is-stuck" data-nav>
+  <div class="nav-e__inner">
+    <a class="nav-e__brand" href="./index.html"><i></i>STYLE<span class="u-red">/</span>GUIDE</a>
+    <a class="btn-e btn-e--ghost btn-e--sm" href="./index.html">← BACK TO DEMO</a>
+  </div>
+</header>
+
+<main style="padding-top: calc(var(--nav-h) + 3rem)">
+<div class="u-shell">
+
+  <span class="u-kicker">Design System</span>
+  <h1 class="u-display" style="font-size:clamp(2.8rem,9vw,7rem)">PROTO<span class="u-red">COL</span></h1>
+  <p class="u-dim" style="max-width:60ch">
+    一套面向电竞 / FPS 语境的深色设计系统。核心关键词：<b class="u-fg">切角几何、信号红、HUD 元素、窄体大写标题、低饱和底噪</b>。
+  </p>
+
+  <hr class="u-rule">
+
+  <!-- 01 COLOR -->
+  <section class="mb-5">
+    <span class="u-kicker">01 — Color</span>
+    <h2 style="font-size:2.6rem">配色</h2>
+    <div class="row g-3">
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#0f1923"><code>--e-bg #0F1923</code></div></div>
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#070d14"><code>--e-bg-deep #070D14</code></div></div>
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#16222e"><code>--e-bg-soft #16222E</code></div></div>
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#1b2733"><code>--e-panel #1B2733</code></div></div>
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#ff4655"><code>--e-red #FF4655</code></div></div>
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#00e6c3"><code style="color:#0f1923">--e-teal #00E6C3</code></div></div>
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#ffcf5c"><code style="color:#0f1923">--e-gold #FFCF5C</code></div></div>
+      <div class="col-6 col-md-3"><div class="sg-swatch" style="background:#ece8e1"><code style="color:#0f1923">--e-fg #ECE8E1</code></div></div>
+    </div>
+    <p class="u-dim mt-3" style="font-size:.9rem">
+      比例建议 <b class="u-fg">70 / 20 / 10</b>：深底占 70%，米白文字占 20%，信号红 + 青只占 10% 用于强调，避免"到处红"导致视觉噪音。
+    </p>
+  </section>
+
+  <!-- 02 TYPE -->
+  <section class="mb-5">
+    <span class="u-kicker">02 — Typography</span>
+    <h2 style="font-size:2.6rem">字体层级</h2>
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="sg-block">
+          <span class="sg-label">Display / Teko — 标题、数字、栏目名</span>
+          <div class="u-display" style="font-size:4.5rem">TOURNAMENT 0128</div>
+          <span class="sg-label mt-4">UI / Rajdhani — 按钮、导航、标签</span>
+          <div style="font-family:var(--f-ui);font-weight:700;letter-spacing:.22em;font-size:1.1rem">ENTER DOSSIER · 赛事运营</div>
+          <span class="sg-label mt-4">Mono / Share Tech Mono — HUD 元数据</span>
+          <div class="u-mono">// STATUS : ACTIVE · REGION : CN · BUILD 0.1</div>
+          <span class="sg-label mt-4">Body / Noto Sans SC — 中文正文</span>
+          <p class="u-dim mb-0">中文正文使用 Noto Sans SC，字重 300–400，行高 1.75，段宽 60–75 字符，保证深色背景下的长文可读性。</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="sg-block">
+          <span class="sg-label">Scale</span>
+          <ul class="list-unstyled u-mono m-0" style="line-height:2.2">
+            <li>H1 &nbsp; clamp(3.2rem, 11vw, 10rem)</li>
+            <li>H2 &nbsp; clamp(2.6rem, 6.5vw, 5.6rem)</li>
+            <li>H3 &nbsp; 1.9rem</li>
+            <li>BODY 16px / 1.75</li>
+            <li>META .74rem / .3em</li>
+          </ul>
+          <span class="sg-label mt-4">Glitch</span>
+          <div class="u-display glitch" data-text="GLITCH" style="font-size:3.2rem">GLITCH</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 SHAPE -->
+  <section class="mb-5">
+    <span class="u-kicker">03 — Shape</span>
+    <h2 style="font-size:2.6rem">形状语言</h2>
+    <div class="row g-3">
+      <div class="col-md-3"><div class="u-ph u-notch" style="height:140px">u-notch<br>右下切角</div></div>
+      <div class="col-md-3"><div class="u-ph u-notch-2" style="height:140px">u-notch-2<br>对角切角</div></div>
+      <div class="col-md-3"><div class="u-ph u-notch-card" style="height:140px">u-notch-card<br>卡片切角</div></div>
+      <div class="col-md-3">
+        <div class="hud-corners" style="height:140px">
+          <span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span>
+          <div class="u-ph" style="height:100%">hud-corners<br>四角瞄准框</div>
+        </div>
+      </div>
+    </div>
+    <p class="u-dim mt-3" style="font-size:.9rem">全站 <code class="u-mono">border-radius: 0</code>，一律用 <code class="u-mono">clip-path</code> 切角。切角尺寸：按钮 10px / 卡片 26px。</p>
+  </section>
+
+  <!-- 04 BUTTONS -->
+  <section class="mb-5">
+    <span class="u-kicker">04 — Buttons</span>
+    <h2 style="font-size:2.6rem">按钮</h2>
+    <div class="sg-block">
+      <span class="sg-label">Hover 时红色斜切色块从左扫入</span>
+      <div class="d-flex flex-wrap gap-3 mb-4">
+        <button class="btn-e btn-e--solid">PRIMARY <span class="btn-e__arrow">→</span></button>
+        <button class="btn-e">SECONDARY</button>
+        <button class="btn-e btn-e--ghost">GHOST</button>
+        <button class="btn-e btn-e--teal">DATA / TEAL</button>
+      </div>
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <button class="btn-e btn-e--solid btn-e--sm">SMALL</button>
+        <button class="btn-e btn-e--solid">DEFAULT</button>
+        <button class="btn-e btn-e--solid btn-e--lg">LARGE</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 COMPONENTS -->
+  <section class="mb-5">
+    <span class="u-kicker">05 — Components</span>
+    <h2 style="font-size:2.6rem">组件</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-xl-4">
+        <article class="card-e">
+          <div class="card-e__media"><div class="u-ph">CARD MEDIA</div><span class="card-e__idx">01</span></div>
+          <div class="card-e__body">
+            <h3 class="card-e__title"><a href="#">card-e</a></h3>
+            <p class="card-e__desc">Hover：上浮 10px、左侧红条生长、封面由灰度转彩色并放大。</p>
+            <div class="card-e__foot"><span class="u-mono">CARD</span><span class="u-tag u-tag--red">HOVER ME</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <div class="sg-block">
+          <span class="sg-label">card-skill · meter · u-tag</span>
+          <div class="card-skill mb-3"><h4>card-skill</h4><p class="u-dim mb-0" style="font-size:.9rem">Hover 向右位移 6px。</p></div>
+          <div class="meter" data-meter="86"><div class="meter__head"><span>METER</span><b>86</b></div><div class="meter__bar"><div class="meter__fill"></div></div></div>
+          <div class="meter meter--teal" data-meter="64"><div class="meter__head"><span>METER TEAL</span><b>64</b></div><div class="meter__bar"><div class="meter__fill"></div></div></div>
+          <div class="d-flex gap-2"><span class="u-tag">TEAL</span><span class="u-tag u-tag--red">RED</span><span class="u-tag u-tag--gold">GOLD</span></div>
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="panel-e h-100">
+          <span class="sg-label">panel-e · tl（时间轴）</span>
+          <div class="tl">
+            <div class="tl__item pb-3">
+              <div class="tl__date">2025 — NOW</div>
+              <h3 class="tl__role" style="font-size:1.4rem">Timeline Node</h3>
+              <div class="tl__org">菱形节点 hover 发光</div>
+            </div>
+            <div class="tl__item pb-0">
+              <div class="tl__date">2024</div>
+              <h3 class="tl__role" style="font-size:1.4rem">Timeline Node</h3>
+              <div class="tl__org">Organization</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="sg-block tabs-e">
+          <span class="sg-label">Bootstrap Pills（已皮肤化）</span>
+          <ul class="nav nav-pills gap-2 mb-3">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#sg1">TAB A</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#sg2">TAB B</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="sg1"><p class="u-dim mb-0">切换时内容淡入上移 18px。</p></div>
+            <div class="tab-pane fade" id="sg2"><p class="u-dim mb-0">Bootstrap 原生行为 + 电竞皮肤。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="sg-block form-e">
+          <span class="sg-label">Form · Accordion</span>
+          <label class="form-label" for="sgIn">Input</label>
+          <input class="form-control mb-3" id="sgIn" placeholder="focus 时红色光晕">
+          <div class="accordion accordion-e" id="sgAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sga1">Accordion</button></h2>
+              <div id="sga1" class="accordion-collapse collapse" data-bs-parent="#sgAcc"><div class="accordion-body">+ / − 图标替换默认箭头。</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 MOTION -->
+  <section class="mb-5">
+    <span class="u-kicker">06 — Motion</span>
+    <h2 style="font-size:2.6rem">动效规则</h2>
+    <div class="row g-3">
+      <div class="col-md-4"><div class="sg-block"><span class="sg-label">缓动</span><p class="u-mono mb-0" style="line-height:2">--ease-expo<br>cubic-bezier(.16,1,.3,1)<br><br>--dur .45s / --dur-slow .9s</p></div></div>
+      <div class="col-md-4"><div class="sg-block"><span class="sg-label">进场</span><p class="u-dim mb-0" style="font-size:.9rem">IntersectionObserver 触发 <code class="u-mono">[data-reveal]</code>，支持 up / left / right / clip 四种方向，用 <code class="u-mono">--d</code> 控制错峰延迟。</p></div></div>
+      <div class="col-md-4"><div class="sg-block"><span class="sg-label">无障碍</span><p class="u-dim mb-0" style="font-size:.9rem">开启系统「减少动态效果」后，所有动画、准星光标、打字机自动降级为静态。</p></div></div>
+    </div>
+  </section>
+
+  <hr class="u-rule">
+  <p class="u-mono pb-5">// END OF STYLE GUIDE</p>
+</div>
+</main>
+
+<button class="to-top" data-to-top aria-label="回到顶部">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/esports.js"></script>
+</body>
+</html>

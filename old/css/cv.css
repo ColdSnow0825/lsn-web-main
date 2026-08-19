@@ -1,0 +1,110 @@
+/* 背景：淡粉色 */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFE4E8; /* 与 about、projects 一致 */
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+  
+  /* 顶部导航栏固定右上角 */
+  .top-nav {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 999;
+  }
+  .top-nav a {
+    margin-left: 10px;
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .top-nav a:hover {
+    color: #000;
+  }
+  
+
+  
+  /* ========== 三列布局：左 - 中 - 右 ========== */
+.cv-page {
+    display: grid;
+    /* 左右两列固定宽度 150px，中间自动 */
+    grid-template-columns: 200px auto 250px;
+    /* 占满屏幕高度 */
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* 左右列：side-images */
+  .side-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 在垂直方向居中放置图片 */
+    align-items: center;
+    gap: 70px; /* 图片之间间隔 */
+    box-sizing: border-box;
+    padding: 20px 0; /* 上下留白 */
+  }
+  
+  /* 中间CV卡片放在grid中央列 */
+  .cv-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto; /* 水平居中 + 上下留白 */
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  
+  /* 标题 */
+  .cv-title {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  /* =========== 左右侧图片样式 =========== */
+  /* 统一外框，限制大小 */
+  .image-box {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* 交错倾斜 */
+  .rotate-right {
+    transform: rotate(30deg);
+  }
+  .rotate-left {
+    transform: rotate(-30deg);
+  }
+  
+  /* ============ 滚动淡入动画 ============ */
+  .hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

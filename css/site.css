@@ -1,0 +1,553 @@
+/* ==========================================================================
+   site.css —— 站点层样式（依赖 esports.css 的令牌与组件）
+   仅放"页面专有"的东西，设计系统本身不要改这里
+   ========================================================================== */
+
+/* ---------- 内页头部 ---------- */
+.page-hero {
+  position: relative;
+  padding: calc(var(--nav-h) + clamp(3.5rem, 9vw, 7rem)) 0 clamp(2.5rem, 6vw, 5rem);
+  overflow: hidden;
+  border-bottom: 1px solid var(--e-line);
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; right: -10%;
+  width: 55%; height: 100%;
+  background: linear-gradient(210deg, rgba(255, 70, 85, .16), transparent 65%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+.page-hero__title {
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  margin: .5rem 0 .8rem;
+}
+.page-hero__lead {
+  max-width: 58ch;
+  color: var(--e-fg-dim);
+  margin: 0;
+}
+
+/* ---------- 首页身份卡 ---------- */
+.idcard {
+  position: relative;
+  border: 1px solid var(--e-line);
+  background: linear-gradient(180deg, rgba(255, 70, 85, .10), rgba(15, 25, 35, .65));
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+.idcard img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: contrast(1.06) saturate(1.2) brightness(1.1);
+  transition: filter var(--dur-slow) var(--ease-expo), transform var(--dur-slow) var(--ease-expo);
+}
+.idcard:hover img { filter: contrast(1.08) saturate(1.32) brightness(1.14); transform: scale(1.05); }
+.idcard__meta {
+  position: absolute; left: 0; bottom: 0;
+  width: 100%;
+  padding: 1.1rem 1.3rem;
+  background: linear-gradient(0deg, rgba(7, 13, 20, .95), rgba(7, 13, 20, .55) 60%, transparent);
+  display: flex; justify-content: space-between; align-items: flex-end;
+  z-index: 2;
+}
+
+/* ---------- 图文分栏 ---------- */
+.media-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--e-line);
+}
+.media-frame img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: contrast(1.05) saturate(1.2) brightness(1.1);
+  transition: filter var(--dur-slow) var(--ease-expo), transform var(--dur-slow) var(--ease-expo);
+}
+.media-frame:hover img { filter: contrast(1.07) saturate(1.32) brightness(1.14); transform: scale(1.04); }
+
+/* ---------- 信息列表（键值对） ---------- */
+.kv { list-style: none; margin: 0; padding: 0; }
+.kv li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--e-line);
+}
+.kv li:last-child { border-bottom: 0; }
+.kv dt, .kv .k {
+  font-family: var(--f-ui);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--e-fg-mute);
+  white-space: nowrap;
+}
+.kv .v { text-align: right; color: var(--e-fg); font-size: .95rem; }
+
+/* ---------- 段位 / 战绩卡 ---------- */
+.rank {
+  position: relative;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  border: 1px solid rgba(236, 232, 225, .16);
+  background: rgba(9, 16, 23, .42);
+  backdrop-filter: blur(14px) saturate(135%);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  height: 100%;
+  transition: border-color var(--dur) var(--ease-io), background var(--dur) var(--ease-io), transform var(--dur) var(--ease-expo);
+}
+.rank:hover { border-color: var(--e-line-hot); background: rgba(255, 70, 85, .16); transform: translateY(-6px); }
+.rank__server {
+  font-family: var(--f-mono);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  color: var(--e-fg-mute);
+}
+.rank__tier {
+  font-family: var(--f-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  line-height: 1.1;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  margin: .35rem 0 .1rem;
+  color: var(--e-fg);
+}
+.rank__note { font-size: .84rem; color: var(--e-fg-dim); margin: 0; }
+
+/* ---------- 引述 ---------- */
+.quote-e {
+  position: relative;
+  padding: 1.4rem 0 1.4rem 1.6rem;
+  border-left: 3px solid var(--e-red);
+  font-size: 1.05rem;
+  color: var(--e-fg);
+}
+.quote-e cite {
+  display: block;
+  margin-top: .6rem;
+  font-style: normal;
+  font-family: var(--f-mono);
+  font-size: .74rem;
+  letter-spacing: .18em;
+  color: var(--e-fg-mute);
+}
+
+/* ---------- 技能标签云 ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chips span {
+  padding: .32rem .85rem;
+  font-family: var(--f-ui);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--e-fg-dim);
+  border: 1px solid var(--e-line);
+  background: rgba(27, 39, 51, .5);
+  transition: all var(--dur-fast) var(--ease-io);
+}
+.chips span:hover { color: var(--e-fg); border-color: var(--e-line-hot); background: rgba(255, 70, 85, .09); }
+
+/* ---------- 联系方式 ---------- */
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--e-line);
+  transition: padding-left var(--dur) var(--ease-expo);
+}
+.contact-line:hover { padding-left: .7rem; }
+.contact-line__k {
+  min-width: 108px;
+  font-family: var(--f-mono);
+  font-size: .74rem;
+  letter-spacing: .2em;
+  color: var(--e-red);
+}
+.contact-line__v { font-size: 1.02rem; word-break: break-all; }
+
+/* ---------- 排版式海报（无需照片的视觉块） ---------- */
+.poster {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  border: 1px solid var(--e-line-hot);
+  background:
+    radial-gradient(50rem 30rem at 18% 0%, rgba(255, 70, 85, .26), transparent 66%),
+    repeating-linear-gradient(135deg, rgba(255, 70, 85, .06) 0 2px, transparent 2px 16px),
+    linear-gradient(180deg, #17242f, #0a121a);
+}
+.poster--teal {
+  border-color: rgba(0, 230, 195, .4);
+  background:
+    radial-gradient(50rem 30rem at 18% 0%, rgba(0, 230, 195, .2), transparent 66%),
+    repeating-linear-gradient(135deg, rgba(0, 230, 195, .05) 0 2px, transparent 2px 16px),
+    linear-gradient(180deg, #17242f, #0a121a);
+}
+.poster__bg {
+  position: absolute;
+  left: -.03em;
+  top: clamp(.4rem, 2vw, 1.4rem);
+  font-family: var(--f-display);
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: .78;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(236, 232, 225, .1);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.poster__body { position: relative; z-index: 2; width: 100%; }
+.poster__title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin: .45rem 0 .7rem;
+}
+.poster__list { list-style: none; margin: 0; padding: 0; }
+.poster__list li {
+  display: flex; align-items: baseline; gap: .7rem;
+  padding: .35rem 0;
+  color: var(--e-fg-dim);
+  font-size: .93rem;
+}
+.poster__list li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px; height: 7px;
+  background: var(--e-red);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+/* ---------- 区块背景图（照片压暗后作氛围底纹） ----------
+   注意：图片路径写在元素的 inline background-image 上，
+   不要塞进 CSS 变量 —— 变量里的 url() 会相对样式表目录解析。 */
+.section--bg {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;      /* 桌面端轻微视差 */
+}
+/* 底图去饱和（灰色 + saturation 混合，被 isolation 限制在本区块内） */
+.section--bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #808080;
+  mix-blend-mode: saturation;
+  opacity: .6;
+}
+/* 压暗 + 红色扫光 + 斜纹 */
+.section--bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg,
+      var(--e-bg) 0%,
+      rgba(9, 16, 23, .88) 22%,
+      rgba(9, 16, 23, .88) 78%,
+      var(--e-bg) 100%),
+    linear-gradient(90deg, rgba(255, 70, 85, .16), transparent 58%),
+    repeating-linear-gradient(135deg, rgba(255, 70, 85, .04) 0 2px, transparent 2px 16px);
+}
+/* 需要保留照片色彩时（如现场紫光/应援照）用这个变体，压暗更轻 */
+.section--bg-vivid::before { opacity: .22; }
+.section--bg-vivid::after {
+  background:
+    linear-gradient(180deg,
+      var(--e-bg) 0%,
+      rgba(9, 16, 23, .76) 22%,
+      rgba(9, 16, 23, .76) 78%,
+      var(--e-bg) 100%),
+    linear-gradient(90deg, rgba(255, 70, 85, .12), transparent 58%),
+    repeating-linear-gradient(135deg, rgba(255, 70, 85, .04) 0 2px, transparent 2px 16px);
+}
+
+/* 移动端固定背景会卡顿，iOS 亦不支持 */
+@media (max-width: 991.98px) {
+  .section--bg { background-attachment: scroll; }
+}
+
+/* CTA 条幅背景图 */
+.cta-e--bg {
+  isolation: isolate;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cta-e--bg::before {
+  z-index: -1;
+  background:
+    radial-gradient(60rem 30rem at 50% 0%, rgba(255, 70, 85, .28), transparent 70%),
+    linear-gradient(180deg, rgba(8, 14, 21, .46), rgba(8, 14, 21, .74)),
+    repeating-linear-gradient(135deg, rgba(255, 70, 85, .07) 0 2px, transparent 2px 14px);
+}
+
+/* ---------- 宣言式排版块（无底框，直接压在背景图上） ---------- */
+.statement { position: relative; }
+.statement > .u-mono { display: block; margin-bottom: .9rem; }
+.statement__title {
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: .94;
+  margin: 0;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, .7);
+}
+/* 第二行做红色描边空心字 */
+.statement__title .ghost {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--e-red);
+  text-shadow: none;
+}
+.statement__rule {
+  display: block;
+  width: 74px; height: 3px;
+  margin: 1.5rem 0;
+  background: var(--e-red);
+  box-shadow: 0 0 18px rgba(255, 70, 85, .75);
+}
+.statement__lead {
+  max-width: 42ch;
+  color: var(--e-fg);
+  font-size: .98rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .85);
+  margin-bottom: 0;
+}
+.statement__lead b { color: var(--e-red); font-weight: 700; }
+
+/* ---------- 毛玻璃面板（压在背景图上但不遮死） ---------- */
+.glass {
+  background: rgba(9, 16, 23, .42);
+  backdrop-filter: blur(14px) saturate(135%);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  border: 1px solid rgba(236, 232, 225, .16);
+}
+@supports not (backdrop-filter: blur(2px)) {
+  .glass { background: rgba(9, 16, 23, .82); }
+}
+
+/* ---------- 轮播（Bootstrap Carousel 电竞皮肤） ---------- */
+.carousel-e {
+  position: relative;
+  border: 1px solid var(--e-line);
+  overflow: hidden;
+  background: var(--e-bg-deep);
+}
+.carousel-e .carousel-item > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: contrast(1.05) saturate(1.2) brightness(1.1);
+}
+/* 竖构图 / 混合比例：完整显示 + 同图模糊底衬，避免裁切 */
+.carousel-e__fit {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--e-bg-deep);
+}
+/* 竖图居多时用方形取景框 */
+.carousel-e--square .carousel-e__fit { aspect-ratio: 1 / 1; }
+.carousel-e__blur {
+  position: absolute;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  object-fit: cover;
+  filter: blur(26px) brightness(.6) saturate(1.5);
+}
+.carousel-e__fit > img:not(.carousel-e__blur) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: contrast(1.05) saturate(1.2) brightness(1.1);
+}
+.carousel-e__cap {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 3rem 1.2rem 1.5rem;
+  background: linear-gradient(0deg, rgba(7, 13, 20, .95), rgba(7, 13, 20, .5) 55%, transparent);
+  font-family: var(--f-mono);
+  font-size: .76rem;
+  letter-spacing: .1em;
+  color: var(--e-fg);
+  pointer-events: none;
+}
+.carousel-e .carousel-control-prev,
+.carousel-e .carousel-control-next {
+  width: 44px; height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(7, 13, 20, .72);
+  border: 1px solid var(--e-line);
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+  transition: background var(--dur-fast) var(--ease-io), border-color var(--dur-fast) var(--ease-io);
+}
+.carousel-e .carousel-control-prev { left: 12px; }
+.carousel-e .carousel-control-next { right: 12px; }
+.carousel-e .carousel-control-prev:hover,
+.carousel-e .carousel-control-next:hover {
+  background: var(--e-red);
+  border-color: var(--e-red);
+}
+.carousel-e .carousel-indicators {
+  justify-content: flex-end;
+  margin: 0 1.1rem .9rem 0;
+}
+.carousel-e .carousel-indicators [data-bs-target] {
+  width: 24px; height: 3px;
+  border: 0;
+  background: rgba(236, 232, 225, .3);
+  opacity: 1;
+  margin: 0 3px;
+  transition: background var(--dur-fast) var(--ease-io);
+}
+.carousel-e .carousel-indicators .active { background: var(--e-red); }
+.carousel-e__idx {
+  position: absolute;
+  top: .7rem; left: 1rem;
+  z-index: 3;
+  font-family: var(--f-mono);
+  font-size: .7rem;
+  letter-spacing: .2em;
+  color: var(--e-fg-dim);
+  background: rgba(7, 13, 20, .6);
+  padding: .2rem .55rem;
+}
+@media (min-width: 992px) {
+  .carousel-e.is-sticky { position: sticky; top: calc(var(--nav-h) + 1.5rem); }
+}
+
+/* ---------- 能力雷达图 ---------- */
+.radar {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+  padding: .5rem 1.2rem 0;
+}
+.radar__svg { width: 100%; height: auto; overflow: visible; display: block; }
+.radar__grid { fill: none; stroke: rgba(236, 232, 225, .1); stroke-width: 1; }
+.radar__axis { stroke: rgba(236, 232, 225, .13); stroke-width: 1; }
+.radar__shape {
+  fill: rgba(255, 70, 85, .2);
+  stroke: var(--e-red);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 10px rgba(255, 70, 85, .45));
+  transform-box: view-box;
+  transform-origin: 200px 200px;
+  transform: scale(.04);
+  opacity: 0;
+  transition: transform 1.15s var(--ease-expo), opacity .5s var(--ease-io);
+}
+.radar__dot {
+  fill: var(--e-red);
+  stroke: var(--e-bg);
+  stroke-width: 2;
+  transform-box: view-box;
+  transform-origin: 200px 200px;
+  transform: scale(.04);
+  opacity: 0;
+  transition: transform 1.15s var(--ease-expo) .08s, opacity .5s var(--ease-io) .08s;
+}
+.radar.is-on .radar__shape,
+.radar.is-on .radar__dot { transform: scale(1); opacity: 1; }
+.radar__label {
+  fill: var(--e-fg-dim);
+  font-family: var(--f-ui);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.radar__value {
+  fill: var(--e-red);
+  font-family: var(--f-mono);
+  font-size: 13px;
+}
+@media (max-width: 575.98px) {
+  .radar__label { font-size: 17px; }
+  .radar__value { font-size: 15px; }
+}
+
+/* ---------- 图表 / 架构图（浅底图放进深色卡片） ---------- */
+.card-e__media.is-diagram { background: #f5f5f3; cursor: zoom-in; }
+.card-e__media.is-diagram img {
+  object-fit: contain;
+  padding: .55rem;
+  filter: none;
+  transform: none;
+}
+.card-e:hover .card-e__media.is-diagram img { filter: none; transform: scale(1.04); }
+.card-e__media.is-diagram .card-e__idx { color: rgba(15, 25, 35, .3); }
+
+.diagram {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #f5f5f3;
+  border: 1px solid var(--e-line);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform var(--dur-slow) var(--ease-expo);
+}
+.diagram:hover img { transform: scale(1.03); }
+.diagram__hint {
+  position: absolute;
+  right: .55rem; bottom: .55rem;
+  padding: .22rem .7rem;
+  background: var(--e-red);
+  color: #fff;
+  font-family: var(--f-ui);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--dur) var(--ease-io), transform var(--dur) var(--ease-expo);
+}
+.diagram:hover .diagram__hint { opacity: 1; transform: none; }
+
+/* 放大弹窗里的图 */
+.modal-diagram .modal-body { background: #f5f5f3; padding: 1rem; }
+.modal-diagram .modal-body img { width: 100%; height: auto; display: block; }
+
+/* ---------- PDF 内嵌 ---------- */
+.pdf-frame {
+  width: 100%;
+  height: min(1100px, 128vw);
+  border: 0;
+  background: var(--e-bg-deep);
+}
+@media (max-width: 767.98px) { .pdf-frame { height: 78vh; } }
+
+/* ---------- 项目卡里的真实图片 ---------- */
+.card-e__media img { display: block; }
+
+/* ---------- 页脚品牌 ---------- */
+.footer-e__brand { font-family: var(--f-display); font-size: 1.6rem; letter-spacing: .1em; text-transform: uppercase; }

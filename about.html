@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人档案 Dossier ｜ 刘思诺 Snow</title>
+<meta name="description" content="刘思诺（Snow）个人档案：UCL 数字人文硕士在读、布里斯托大学汉英翻译硕士、北京语言大学英语语言文学本科；专业技能涵盖赛事运营、现场执行、制度文档与中英双语沟通。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/esports.css">
+<link rel="stylesheet" href="./css/site.css">
+</head>
+
+<body>
+
+<div class="fx-scanlines"></div>
+<div class="fx-noise"></div>
+<div class="fx-vignette"></div>
+<div class="fx-hud"><span></span><span></span><span></span><span></span></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<header class="nav-e" data-nav>
+  <div class="nav-e__inner">
+    <a class="nav-e__brand" href="./index.html"><i></i>SNOW<span class="u-red">/</span>LIU</a>
+    <nav>
+      <ul class="nav-e__links">
+        <li><a class="nav-e__link" href="./index.html">Home</a></li>
+        <li><a class="nav-e__link is-active" href="./about.html">Dossier</a></li>
+        <li><a class="nav-e__link" href="./valorant.html">Valorant</a></li>
+        <li><a class="nav-e__link" href="./projects.html">Projects</a></li>
+        <li><a class="nav-e__link" href="./cv.html">Resume</a></li>
+      </ul>
+    </nav>
+    <div class="d-flex align-items-center gap-3">
+      <a class="btn-e btn-e--solid btn-e--sm d-none d-lg-inline-flex" href="./cv.html">简历 <span class="btn-e__arrow">→</span></a>
+      <button class="nav-e__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#navPanel" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-end oc-e" tabindex="-1" id="navPanel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">NAVIGATION</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="关闭"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="oc-e__link" href="./index.html"><small>01</small> Home</a>
+    <a class="oc-e__link" href="./about.html"><small>02</small> Dossier</a>
+    <a class="oc-e__link" href="./valorant.html"><small>03</small> Valorant</a>
+    <a class="oc-e__link" href="./projects.html"><small>04</small> Projects</a>
+    <a class="oc-e__link" href="./cv.html"><small>05</small> Resume</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ 页头 ============ -->
+<section class="page-hero">
+  <div class="u-shell position-relative" style="z-index:2">
+    <span class="u-kicker">Agent Dossier</span>
+    <h1 class="page-hero__title u-display">个人 <span class="u-red">档案</span></h1>
+    <p class="page-hero__lead">
+      一个从语言与人文出发、最后走进电竞行业的人。翻译训练让我处理"信息如何准确传递"，
+      数字人文训练让我处理"信息如何被结构化"，而电竞现场让这两件事同时发生。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 01 基本信息 ============ -->
+<section class="section" id="profile">
+  <span class="u-ghost-num" style="top:1rem;right:2%">01</span>
+  <div class="u-shell">
+    <div class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-5" data-reveal="left">
+        <div class="media-frame u-notch-card hud-corners" style="aspect-ratio:4/5">
+          <span class="c"></span><span class="c"></span><span class="c"></span><span class="c"></span>
+          <img src="./images/13.jpg" alt="刘思诺穿 VCT 球衣在电竞机位" style="object-position:60% center">
+        </div>
+        <p class="u-mono mt-2 mb-0">// VCT JERSEY · AGENT SELECT</p>
+      </div>
+
+      <div class="col-lg-7" data-reveal="right" style="--d:.1s">
+        <span class="u-kicker">Profile</span>
+        <h2 class="section__title" style="font-size:clamp(2.2rem,5vw,4rem)">刘思诺 <em>Snow</em></h2>
+
+        <p class="u-dim mt-3">
+          目前在英雄电竞 CCI 项目中心担任赛事导演实习生，参与《王者荣耀》KPL 十周年年度庆典的内容策划；
+          同时在伦敦大学学院（UCL）攻读数字人文硕士。在此之前，我在外研社做过期刊编辑与新媒体运营，
+          在巴基斯坦使馆学校做过会议口译与双语主持。
+        </p>
+        <p class="u-dim">
+          我的求职方向非常明确：<b class="u-fg">无畏契约电竞联盟运营</b>——队伍与选手管理、赛事活动协同。
+          因为这是唯一一个能同时用上我"深度玩家身份 + 赛事执行经验 + 双语沟通能力"的岗位。
+        </p>
+
+        <ul class="kv mt-4">
+          <li><span class="k">求职意向</span><span class="v">无畏契约电竞联盟运营｜队伍 / 选手管理｜赛事活动协同</span></li>
+          <li><span class="k">Base</span><span class="v">上海 · 北京 · 伦敦（可接受高频出差）</span></li>
+          <li><span class="k">Email</span><span class="v"><a href="mailto:snowliu0529@163.com">snowliu0529@163.com</a></span></li>
+          <li><span class="k">Phone</span><span class="v"><a href="tel:+8618519385835">185 1938 5835</a></span></li>
+          <li><span class="k">GitHub</span><span class="v"><a href="https://github.com/SnowL365/lsn-web" target="_blank" rel="noopener">SnowL365</a></span></li>
+        </ul>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn-e btn-e--solid btn-e--sm" href="./valorant.html">无畏契约专区 <span class="btn-e__arrow">→</span></a>
+          <a class="btn-e btn-e--ghost btn-e--sm" href="./cv.html">完整简历</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 教育背景 ============ -->
+<section class="section" id="education" style="background:linear-gradient(180deg,transparent,rgba(255,70,85,.045),transparent)">
+  <span class="u-ghost-num" style="top:1rem;left:2%">02</span>
+  <div class="u-shell">
+    <div class="section__head">
+      <div data-reveal>
+        <span class="u-kicker">Section 02 — Education</span>
+        <h2 class="section__title">教育 <em>背景</em></h2>
+      </div>
+    </div>
+
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-7">
+        <div class="tl">
+          <div class="tl__item" data-reveal="left">
+            <div class="tl__date">2025.09 — 2026.09</div>
+            <h3 class="tl__role">数字人文 硕士（二硕在读）</h3>
+            <div class="tl__org">伦敦大学学院 University College London（UCL）</div>
+            <p class="u-dim mb-0" style="font-size:.94rem">
+              主要课程：数据分析与可视化、图数据库、网页编程、数字化技术。
+              课程项目中独立设计 VCT 选手与俱乐部语义网，在数据库中录入选手信息，
+              明确联盟架构与选手转会关系。
+            </p>
+          </div>
+
+          <div class="tl__item" data-reveal="left" style="--d:.08s">
+            <div class="tl__date">2023.09 — 2024.09</div>
+            <h3 class="tl__role">汉英翻译 硕士</h3>
+            <div class="tl__org">英国布里斯托大学 University of Bristol · 二等一荣誉学位</div>
+            <p class="u-dim mb-0" style="font-size:.94rem">
+              担任《Not Enough Time》游戏汉化项目负责人；
+              硕士论文研究《无畏契约》在中国市场的语言、文化与技术本地化。
+            </p>
+          </div>
+
+          <div class="tl__item" data-reveal="left" style="--d:.16s">
+            <div class="tl__date">2019.09 — 2023.06</div>
+            <h3 class="tl__role">英语语言文学 本科</h3>
+            <div class="tl__org">北京语言大学 Beijing Language and Culture University</div>
+            <p class="u-dim mb-0" style="font-size:.94rem">
+              英语专业八级（TEM-8）、英语专业四级（TEM-4）、雅思 6.5、普通话一级乙等。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-reveal="right">
+        <div class="panel-e h-100">
+          <span class="u-kicker">Certificates</span>
+          <h3 style="font-size:2rem;margin-top:.6rem">证书 / 认证</h3>
+          <ul class="kv">
+            <li><span class="k">TEM-8</span><span class="v">英语专业八级</span></li>
+            <li><span class="k">TEM-4</span><span class="v">英语专业四级</span></li>
+            <li><span class="k">IELTS</span><span class="v">雅思 6.5</span></li>
+            <li><span class="k">普通话</span><span class="v">一级乙等</span></li>
+          </ul>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <span class="u-tag u-tag--gold">AIGC 大赛一等奖</span>
+            <span class="u-tag">外研社 AI 小组组长</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 校园经历 ============ -->
+<section class="section" id="campus">
+  <span class="u-ghost-num" style="top:1rem;right:2%">03</span>
+  <div class="u-shell">
+    <div class="section__head">
+      <div data-reveal>
+        <span class="u-kicker">Section 03 — Campus</span>
+        <h2 class="section__title">校园 <em>经历</em></h2>
+      </div>
+      <p class="u-mono" data-reveal style="max-width:34ch;--d:.1s">
+        // 制度、会务与现场执行的第一课
+      </p>
+    </div>
+
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5" data-reveal="left">
+        <div id="campusCarousel" class="carousel slide carousel-e u-notch-card is-sticky" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="0" class="active" aria-label="第 1 张"></button>
+            <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="1" aria-label="第 2 张"></button>
+            <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="2" aria-label="第 3 张"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/11.jpg" alt="" aria-hidden="true">
+                <img src="./images/11.jpg" alt="本科毕业论文：守望先锋游戏文本翻译研究">
+              </div>
+              <div class="carousel-e__cap">// 本科毕业论文 · 以《守望先锋》为例的游戏文本翻译研究</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/3.jpg" alt="" aria-hidden="true">
+                <img src="./images/3.jpg" alt="第 29 届北京语言大学模拟联合国大会">
+              </div>
+              <div class="carousel-e__cap">// 第 29 届北语模拟联合国大会 · 秘书处</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/4.jpg" alt="" aria-hidden="true">
+                <img src="./images/4.jpg" alt="中巴交流活动现场口译与双语主持">
+              </div>
+              <div class="carousel-e__cap">// 中巴交流活动 · 现场口译与双语主持</div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">上一张</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">下一张</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-12" data-reveal>
+            <div class="card-skill h-100">
+              <div class="tl__date">2019.09 — 2021.09</div>
+              <h4 class="mt-2">秘书处处长</h4>
+              <div class="u-dim mb-2" style="font-size:.88rem">北京语言大学模拟联合国社团</div>
+              <p class="u-dim mb-0" style="font-size:.94rem">
+                负责校内模拟联合国大会的制度制定、人员协调、经费管理与现场执行，
+                形成了对流程规范与突发情况处理的基本方法论。
+              </p>
+            </div>
+          </div>
+          <div class="col-12" data-reveal style="--d:.08s">
+            <div class="card-skill h-100">
+              <div class="tl__date">2020.04 — 2021.07</div>
+              <h4 class="mt-2">办公室主任</h4>
+              <div class="u-dim mb-2" style="font-size:.88rem">北京语言大学学生会</div>
+              <p class="u-dim mb-0" style="font-size:.94rem">
+                负责会议筹办、活动申请、文档管理及学代会会务，
+                参与起草学生会章程初稿，累计完成 20 余份活动策划案。
+              </p>
+            </div>
+          </div>
+          <div class="col-12" data-reveal style="--d:.16s">
+            <div class="card-skill h-100" style="border-left-color:var(--e-teal)">
+              <div class="tl__date">2023.06</div>
+              <h4 class="mt-2">本科毕业论文</h4>
+              <div class="u-dim mb-2" style="font-size:.88rem">目的论视角下的电子游戏文本翻译研究</div>
+              <p class="u-dim mb-0" style="font-size:.94rem">
+                以《守望先锋》为个案，从目的论（Skopos Theory）切入分析游戏文本翻译策略——
+                本科阶段就已经把「游戏」当成正经的研究对象。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 专业技能 ============ -->
+<section class="section" id="skills" style="background:linear-gradient(180deg,transparent,rgba(0,230,195,.05),transparent)">
+  <span class="u-ghost-num" style="top:1rem;left:2%">04</span>
+  <div class="u-shell">
+    <div class="section__head">
+      <div data-reveal>
+        <span class="u-kicker">Section 04 — Skills</span>
+        <h2 class="section__title">专业 <em>技能</em></h2>
+      </div>
+    </div>
+
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-7">
+        <div class="tabs-e" data-reveal>
+          <ul class="nav nav-pills gap-2 mb-4" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#sk-ops" type="button" role="tab">赛事 OPS</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sk-doc" type="button" role="tab">制度 DOC</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sk-tool" type="button" role="tab">工具 TOOLS</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sk-lang" type="button" role="tab">语言 LANG</button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="sk-ops" role="tabpanel">
+              <div class="row g-3">
+                <div class="col-md-6"><div class="card-skill h-100"><h4>联盟与赛事</h4><p class="u-dim mb-0" style="font-size:.92rem">熟悉 VCT 赛事体系、队伍结构、选手参赛流程及无畏契约职业生态，长期关注国内外赛区、俱乐部及赛训动态。</p></div></div>
+                <div class="col-md-6"><div class="card-skill h-100"><h4>现场执行</h4><p class="u-dim mb-0" style="font-size:.92rem">熟悉执行台本、候场与上下场口、信息传递、流程衔接与风险点梳理。</p></div></div>
+                <div class="col-12"><div class="card-skill"><h4>工作适应</h4><p class="u-dim mb-0" style="font-size:.92rem">可接受境内外高频出差与高强度现场工作，具备主动推进和应急处理意识。</p></div></div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="sk-doc" role="tabpanel">
+              <div class="card-skill">
+                <h4>制度与文档能力</h4>
+                <p class="u-dim mb-0" style="font-size:.92rem">
+                  能够撰写赛事方案、执行流程、任务清单、会议材料及管理规范，
+                  并将需求拆解至明确节点和责任人。曾参与学生会章程起草与管理材料撰写。
+                </p>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="sk-tool" role="tabpanel">
+              <div class="card-skill mb-3">
+                <h4>办公与数据</h4>
+                <p class="u-dim mb-0" style="font-size:.92rem">
+                  熟练使用 Word / Excel / PowerPoint，可制作流程表、策划案及执行手册；
+                  可将数据库与编程语言融入日常工作。
+                </p>
+              </div>
+              <div class="chips">
+                <span>Word</span><span>Excel</span><span>PowerPoint</span>
+                <span>Python</span><span>Pandas</span><span>Jieba</span>
+                <span>图数据库 / Neo4j</span><span>数据可视化</span>
+                <span>SDL Trados</span><span>MemoQ</span><span>HTML / CSS / JS</span>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="sk-lang" role="tabpanel">
+              <div class="card-skill">
+                <h4>中英双语</h4>
+                <p class="u-dim mb-0" style="font-size:.92rem">
+                  英语专业八级，具备中英双语写作、翻译、口译与主持能力；
+                  可接受跨境出差，熟悉相关流程和手续办理。日语基础。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-reveal="right">
+        <div class="panel-e h-100">
+          <span class="u-kicker">Proficiency</span>
+          <h3 style="font-size:2rem;margin:.6rem 0 .4rem">能力分布</h3>
+
+          <div data-radar='[["赛事执行",92],["VCT 生态",90],["方案文档",88],["双语沟通",95],["数据技术",76],["社群运营",85]]'></div>
+
+          <p class="u-mono mt-2 mb-0">// 自评，仅作能力权重参考</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 关于我 ============ -->
+<section class="section" id="beyond">
+  <span class="u-ghost-num" style="top:1rem;right:2%">05</span>
+  <div class="u-shell">
+    <div class="section__head">
+      <div data-reveal>
+        <span class="u-kicker">Section 05 — Beyond</span>
+        <h2 class="section__title">屏幕 <em>之外</em></h2>
+      </div>
+    </div>
+
+    <div class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-6" data-reveal="left">
+        <blockquote class="quote-e">
+          从模联的会场，到出版社的稿件，到 KPL 的红毯动线——
+          我一直在做同一件事：把混乱的信息整理成一条能被执行的流程。
+          只不过现在，这条流程通向的是我真正热爱的赛场。
+          <cite>// LIU SINUO</cite>
+        </blockquote>
+
+        <div class="chips mt-4">
+          <span>无畏契约</span><span>守望先锋</span><span>应援插画</span><span>现场应援</span>
+          <span>VCT 观赛</span><span>OWCS 现场</span><span>选手周边收藏</span>
+          <span>外设桌搭</span><span>插画</span><span>摄影</span>
+          <span>模拟联合国</span><span>数字人文</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-reveal="right" style="--d:.1s">
+        <div id="beyondCarousel" class="carousel slide carousel-e carousel-e--square u-notch-card" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#beyondCarousel" data-bs-slide-to="0" class="active" aria-label="第 1 张"></button>
+            <button type="button" data-bs-target="#beyondCarousel" data-bs-slide-to="1" aria-label="第 2 张"></button>
+            <button type="button" data-bs-target="#beyondCarousel" data-bs-slide-to="2" aria-label="第 3 张"></button>
+            <button type="button" data-bs-target="#beyondCarousel" data-bs-slide-to="3" aria-label="第 4 张"></button>
+            <button type="button" data-bs-target="#beyondCarousel" data-bs-slide-to="4" aria-label="第 5 张"></button>
+            <button type="button" data-bs-target="#beyondCarousel" data-bs-slide-to="5" aria-label="第 6 张"></button>
+            <button type="button" data-bs-target="#beyondCarousel" data-bs-slide-to="6" aria-label="第 7 张"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/17.jpg" alt="" aria-hidden="true">
+                <img src="./images/17.jpg" alt="自绘 EDG 无畏契约阵容应援插画">
+              </div>
+              <div class="carousel-e__cap">// 自绘 EDG 阵容应援插画 · 举在赛事现场</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/20.jpg" alt="" aria-hidden="true">
+                <img src="./images/20.jpg" alt="自绘 RRQ 战队应援板">
+              </div>
+              <div class="carousel-e__cap">// 自绘 RRQ 应援板 · 大师赛现场</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/18.jpg" alt="" aria-hidden="true">
+                <img src="./images/18.jpg" alt="职业选手签名拍立得">
+              </div>
+              <div class="carousel-e__cap">// 职业选手签名拍立得 · VALORANT MASTERS</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/19.jpg" alt="" aria-hidden="true">
+                <img src="./images/19.jpg" alt="VALORANT Masters 现场观赛合影">
+              </div>
+              <div class="carousel-e__cap">// VALORANT MASTERS 现场 · 观赛合影</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/8.jpg" alt="" aria-hidden="true">
+                <img src="./images/8.jpg" alt="OWCS 守望先锋冠军赛现场">
+              </div>
+              <div class="carousel-e__cap">// OWCS 守望先锋冠军赛 · 现场</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/12.jpg" alt="" aria-hidden="true">
+                <img src="./images/12.jpg" alt="战队签名照收藏">
+              </div>
+              <div class="carousel-e__cap">// 现场收藏 · 战队签名照</div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-e__fit">
+                <img class="carousel-e__blur" src="./images/5.jpg" alt="" aria-hidden="true">
+                <img src="./images/5.jpg" alt="个人绘画作品">
+              </div>
+              <div class="carousel-e__cap">// 个人绘画作品 · SNOW</div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#beyondCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">上一张</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#beyondCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">下一张</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer-e">
+  <div class="u-shell">
+    <div class="footer-e__grid">
+      <div>
+        <a class="nav-e__brand mb-3 d-inline-flex" href="./index.html"><i></i>SNOW<span class="u-red">/</span>LIU</a>
+        <p class="u-dim" style="font-size:.9rem;max-width:32ch">
+          刘思诺（Snow）· 无畏契约电竞联盟运营方向<br>Base 上海 / 北京 / 伦敦，可接受高频出差。
+        </p>
+      </div>
+      <div>
+        <div class="footer-e__head">Navigate</div>
+        <ul>
+          <li><a href="./index.html">首页 Home</a></li>
+          <li><a href="./valorant.html">无畏契约 Valorant</a></li>
+          <li><a href="./projects.html">项目 Projects</a></li>
+          <li><a href="./cv.html">简历 Resume</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-e__head">Channels</div>
+        <ul>
+          <li><a href="https://github.com/SnowL365/lsn-web" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:snowliu0529@163.com">snowliu0529@163.com</a></li>
+          <li><a href="tel:+8618519385835">185 1938 5835</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-e__head">Status</div>
+        <ul class="kv">
+          <li><span class="k">Now</span><span class="v">英雄电竞 CCI</span></li>
+          <li><span class="k">Study</span><span class="v">UCL 数字人文</span></li>
+          <li><span class="k">Seeking</span><span class="v">联盟运营</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-e__bar">
+      <span class="u-mono">© 2026 LIU SINUO</span>
+      <span class="u-mono">DESIGN SYSTEM: PROTOCOL</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" data-to-top aria-label="回到顶部">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/esports.js"></script>
+</body>
+</html>
